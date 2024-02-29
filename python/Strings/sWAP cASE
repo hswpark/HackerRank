@@ -1,0 +1,15 @@
+# https://www.hackerrank.com/challenges/swap-case/problem?isFullScreen=true
+
+def swap_case(s):
+    empty_str = ''
+    for i in s:
+        if i.islower():
+            empty_str = empty_str + i.upper()
+        else: 
+            empty_str = empty_str + i.lower()
+    return empty_str
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)

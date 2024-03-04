@@ -4,7 +4,7 @@ def count_substring(string, sub_string):
     count = 0
     for i in range(len(string)):
         if string[i] == sub_string[0]:
-            count += string[i:].count(sub_string)
+            count += string[i:i+len(sub_string)].count(sub_string)
         # print(str(i)+' ' + str(count))
     return count
 

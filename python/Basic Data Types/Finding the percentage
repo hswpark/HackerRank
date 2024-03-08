@@ -1,0 +1,13 @@
+# https://www.hackerrank.com/challenges/finding-the-percentage/problem?isFullScreen=true
+
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    length_of_marks = 3
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    marks_avg = sum(student_marks[query_name])/length_of_marks
+    print(f"{marks_avg:.2f}")

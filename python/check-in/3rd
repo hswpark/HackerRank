@@ -1,0 +1,29 @@
+# Count Occurrences:
+# Write a Python function that takes a list and an element as input and returns the number of occurrences of that element in the list.
+
+# write a function
+# input -> list and element
+# returns the number of occurrences of that element in the list.
+
+def count_element(input_list, input_element):
+    return input_list.count(input_element)
+
+input_list = ['abc','a','b','c']
+input_element = 'a'
+print(count_element(input_list,input_element))
+
+
+
+# input -> list
+# return a dictionary -> key : element , value : the occurrences
+
+def count_element(input_list):
+    dict = {}
+    for i in list(set(input_list)):   # set 처리를 하지 않으면 linearly growing (not optimised)
+        a = i
+        b = input_list.count(i)
+        dict[a] = b
+    return dict
+
+
+# map function 사용해보기

@@ -1,0 +1,10 @@
+# https://www.hackerrank.com/challenges/py-set-add/problem?isFullScreen=true
+
+n = int(input())
+unique_stamps = set()
+
+for i in range(n):
+    country = input()
+    unique_stamps.add(country)
+    
+print(len(unique_stamps))

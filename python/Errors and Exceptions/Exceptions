@@ -1,0 +1,14 @@
+# https://www.hackerrank.com/challenges/exceptions/problem?isFullScreen=true
+
+n = int(input())
+
+for i in range(n):
+    
+    try: 
+        a,b = map(int, input().split())
+        print(a//b)
+    except ZeroDivisionError as zde:
+        print('Error Code:', zde)
+    except ValueError as ve:
+        print('Error Code:', ve )
+           

@@ -1,0 +1,20 @@
+# https://www.hackerrank.com/challenges/nested-list/problem?isFullScreen=true
+
+if __name__ == '__main__':
+    name_score_list = []
+    score_list = []
+    n = int(input())
+    
+    for _ in range(n):
+        name = input()
+        score = float(input())
+        name_score_list.append([name,score])
+        score_list.append(score)
+    
+    second_lowest_mark = sorted(set(score_list))[1]
+
+    name_score_list = sorted(name_score_list)
+    
+    for i in name_score_list:
+        if i[1] == second_lowest_mark:
+            print(i[0])

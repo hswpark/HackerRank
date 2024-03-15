@@ -1,0 +1,15 @@
+# https://www.hackerrank.com/challenges/symmetric-difference/problem?isFullScreen=true
+
+n = input()
+list_n = list(map(int, input().split()))
+set_n = set(list_n)
+
+m = input()
+list_m = list(map(int, input().split()))
+set_m = set(list_m)
+
+diff_n = set_n.difference(set_m)
+diff_m = set_m.difference(set_n)
+
+for i in sorted(diff_n.union(diff_m)):
+    print(i)

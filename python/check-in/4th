@@ -1,0 +1,36 @@
+'''
+Write a Python function that takes two strings as input 
+and returns True if they are anagrams (contain the same letters with the same frequency), 
+False otherwise.
+'''
+
+## answer 1
+def are_anagrams(str1, str2):
+    # Your code here
+    return_value = True
+    if sorted(list(str1)) != sorted(list(str2)):
+        return_value = False
+    return return_value
+
+
+## answer 2
+def are_anagrams(str1, str2):
+    # Your code here
+    dict_str1 = {}
+    for s in set(str1):
+        dict_str1[s] = str1.count(s)
+    print(dict_str1)
+    dict_str2 = {} 
+    for s in set(str2):
+        dict_str2[s] = str2.count(s)    
+    print(dict_str2)
+    if dict_str1 == dict_str2:
+        return True
+    else:
+        return False
+    pass
+# Test the function
+test_str1 = "listen"
+test_str2 = "silent"
+result = are_anagrams(test_str1, test_str2)
+print(result)

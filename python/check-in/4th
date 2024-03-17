@@ -8,7 +8,7 @@ False otherwise.
 def are_anagrams(str1, str2):
     # Your code here
     return_value = True
-    if sorted(list(str1)) != sorted(list(str2)):
+    if sorted(str1) != sorted(str2):
         return_value = False
     return return_value
 

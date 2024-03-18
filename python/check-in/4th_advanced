@@ -1,0 +1,25 @@
+'''
+Advanced Anagram Problem:
+Write a Python function that takes a list of strings as input and groups together strings that are anagrams of each other. 
+The function should return a list of lists, where each inner list contains strings that are anagrams of each other.
+'''
+
+def group_anagrams(strs):
+    # Your code here
+    dict_string = {}
+    for i in strs:
+        dict_string[i] = ''.join(sorted(i))
+    dict_anagram = {}
+    for i in set(dict_string.values()):
+        dict_anagram[i] = []
+        for j in dict_string.keys():
+            if dict_string[j] == i:
+                dict_anagram[i].append(j)
+    print(list(dict_anagram.values()))
+ 
+    pass
+
+# Test the function
+test_strings = ["eat", "tea", "tan", "ate", "nat", "bat"]
+result = group_anagrams(test_strings)
+print(result)
